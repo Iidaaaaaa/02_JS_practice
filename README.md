@@ -14,15 +14,20 @@
 
 <h4>オブジェクトとクラス</h4>
 
-**javaScript クイズ**
+**JavaScript クイズ**
 
-<JavaScriptQuiz.html>
+<JS_Quiz/JavaScriptQuiz.html>
 
 **授業内容**
 
 <study/object.html>
+<study/ramen.html>
 
 <h3>やったこと</h3>
+
+**クラスの定義**
+
+**テンプレートリテラル**
 
 **オブジェクトの復習**
 
