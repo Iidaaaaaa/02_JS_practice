@@ -6,12 +6,16 @@
 
 ### 0415
 
-> javaScript クイズ
-> <JavaScriptQuiz.html>
-> 授業内容
-> <study/object.html>
+**javaScript クイズ**
 
-##　やったこと
+<JavaScriptQuiz.html>
+
+**授業内容**
+
+<study/object.html>
+
+####　やったこと
+
 **オブジェクトの復習**
 
 this は変数の中でわざわざ変数名を書かなくてもいいやつ的な
