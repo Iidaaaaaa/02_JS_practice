@@ -6,5 +6,14 @@
 
 ### 0415
 
-javaScript クイズ
-</02_JS_practice/0415/JavaScriptQuiz.html>
+> javaScript クイズ
+> <JavaScriptQuiz.html>
+> 授業内容
+> <study/object.html>
+
+##　やったこと
+**オブジェクトの復習**
+
+this は変数の中でわざわざ変数名を書かなくてもいいやつ的な
+
+###　ここまで　 0415 内容
