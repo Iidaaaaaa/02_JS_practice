@@ -1,6 +1,6 @@
 # 02_JS_practice
 
-2024 前期「JavaScript 演習」リポジトリ
+2024 前期「JavaScript 演習」リポジトリ 
 
 <h5>JS クイズは JS_Quiz ファイル、授業内容は study ファイルに入っています。</h5>
 
