@@ -73,6 +73,26 @@
         document.body.insertAdjacentHTML("beforeend", ramen.descript());
       });
       //   オブジェクトの配列
+
+      class Maker extends InstantNoodle {
+        constructor(ramen, taste, company) {
+          super(ramen, taste);
+          this.maker = company;
+        }
+        makerDescript() {
+          return `<p>販売元は、${this.maker}です。</p>`;
+        }
+      }
+      //サブクラスのメソッド化
+      const maker = new Maker("マルちゃん正麺", "しょうゆ", "東洋水産");
+
+      //サブクラスのメソッド
+      document.body.insertAdjacentHTML("beforeend", maker.makerDescript());
+      console.log(maker.name);
+
+      //スーパークラスのメソッドも利用できる
+      document.body.insertAdjacentHTML("beforeend", maker.descript());
+      console.dir(document.body);
     </script>
   </body>
 </html>

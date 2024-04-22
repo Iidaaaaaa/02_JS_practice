@@ -7,8 +7,28 @@
 ---
 
 - 4 月 15 日 -0415 ファイル
+- 4 月 22 日 -0422 ファイル
 
 ---
+
+### 0422
+
+<h4></h4>
+
+**JavaScript クイズ**
+
+</0422/JS_Quiz/JavaScriptQuiz.html>
+
+**授業内容**
+
+<study/chiikawa> <br>
+<study/import.html>
+
+<h3>やったこと</h3>
+
+**インポートとエキスポート**
+
+## 言語化できないけど、インポートしてやったらできる。
 
 ### 0415
 
@@ -16,7 +36,7 @@
 
 **JavaScript クイズ**
 
-<JS_Quiz/JavaScriptQuiz.html>
+</0422/JS_Quiz/JavaScriptQuiz.html>
 
 **授業内容**
 

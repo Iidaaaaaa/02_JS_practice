@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+.movies {
+  padding: 2rem;
+}
+.contents {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 5%;
+}
+.contents dl {
+  width: 30%;
+  margin: 2em 0;
+}
+img {
+  width: 100%;
+}
