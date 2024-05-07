@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>三国志（オブジェクトの操作）</title>
+  </head>
+  <body>
+    <h1>三国志武将</h1>
+    <button class="gi">魏</button>
+    <button class="go">呉</button>
+    <button class="shoku">蜀</button>
+    <ul class="result">
+      <!-- ここに表示させます。 -->
+    </ul>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const threeKingdoms = [
+        {
+          name: "魏",
+          king: "曹操",
+          generals: ["張遼", "司馬懿", "夏侯惇", "郭嘉", "夏侯淵"],
+        },
+        {
+          name: "呉",
+          king: "孫堅",
+          generals: ["周瑜", "太史慈", "魯粛", "甘寧", "陸遜"],
+        },
+        {
+          name: "蜀",
+          king: "劉備",
+          generals: ["関羽", "張飛", "趙雲", "諸葛亮", "姜維"],
+        },
+      ];
+    </script>
+    <script>
+      //ここに記述していきます。
+      const GiBtn = document.querySelector(".gi");
+      const GoBtn = document.querySelector(".go");
+      const ShokuBtn = document.querySelector(".shoku");
+
+      const UlElm = document.querySelector(".result");
+      GiBtn.addEventListener("click", function () {
+        UlElm.textContent = "";
+        for (let i = 0; i < 5; i++) {
+          const LiElm = document.createElement("li");
+          LiElm.textContent = threeKingdoms[0].generals[i];
+          UlElm.appendChild(LiElm);
+        }
+      });
+      GoBtn.addEventListener("click", function () {
+        UlElm.textContent = "";
+        for (let i = 0; i < 5; i++) {
+          const LiElm = document.createElement("li");
+          LiElm.textContent = threeKingdoms[1].generals[i];
+          UlElm.appendChild(LiElm);
+        }
+      });
+      ShokuBtn.addEventListener("click", function () {
+        UlElm.textContent = "";
+        for (let i = 0; i < 5; i++) {
+          const LiElm = document.createElement("li");
+          LiElm.textContent = threeKingdoms[2].generals[i];
+          UlElm.appendChild(LiElm);
+        }
+      });
+    </script>
+  </body>
+</html>
