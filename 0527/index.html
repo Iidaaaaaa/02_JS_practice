@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クイズNEO1⑥_勝敗表</title>
+  </head>
+
+  <body>
+    <h1>尊富士</h1>
+    <ul class="grades">
+      <li>横綱</li>
+      <li>所属部屋：伊勢ヶ濱</li>
+      <li>一月場所：13勝2敗 十両優勝</li>
+    </ul>
+    <button type="button">令和六年三月場所</button>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const takerufuji = {
+        白鷹山: "勝ち",
+        大翔鵬: "勝ち",
+        天空海: "勝ち",
+        英乃海: "勝ち",
+        朝紅龍: "勝ち",
+        紫雷: "勝ち",
+        勇磨: "勝ち",
+        獅司: "勝ち",
+        欧勝海: "勝ち",
+        狼雅: "勝ち",
+        北の若: "負け",
+        輝: "勝ち:負け",
+        天照鵬: "勝ち",
+        千代栄: "勝ち",
+        時疾風: "勝ち",
+      };
+    </script>
+    <script>
+      const Btn = document.querySelector("button");
+      const Grades = document.querySelector(".grades");
+      Btn.addEventListener("click", () => {
+        let WinCount = 0;
+        let LoseCount = 0;
+        for (const key in takerufuji) {
+          if (Object.hasOwnProperty.call(takerufuji, key)) {
+            const element = takerufuji[key];
+            if (element === "勝ち") {
+              WinCount++;
+              console.log(`勝ちの数${WinCount}`);
+            } else {
+              LoseCount++;
+              console.log(`負の数${LoseCount}`);
+            }
+          }
+        }
+        const LiElm = document.createElement("li");
+        LiElm.innerHTML = `３月場所：${WinCount}勝${LoseCount}敗 幕内優勝`;
+        Grades.appendChild(LiElm);
+      });
+    </script>
+  </body>
+</html>
