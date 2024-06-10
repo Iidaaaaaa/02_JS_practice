@@ -1,12 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
 import { getCollection } from 'astro:content';
 const workPages = await getCollection('works');
 ---
-<Layout title="トップページ">
+<Layout title="作品一覧" description="作品一覧ページです。">
   <main>
     {workPages.map(productPage => (<Card title={productPage.data.title} href=`/works/${productPage.slug}` thumbnail={productPage.data.thumbnail} body={productPage.data.description} />
     ))}
     </main>
-  </Layout>
+</Layout>
