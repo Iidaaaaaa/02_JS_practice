@@ -2,6 +2,9 @@
 const { title, description } = Astro.props.frontmatter || Astro.props;
 const pagepath = new URL(Astro.url.pathname, "https://example.com");
 const ogppath = new URL("/ogp.jpg",pagepath);
+import"../style/style.scss"
+import { ViewTransitions } from 'astro:transitions';
+
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,9 +18,15 @@ const ogppath = new URL("/ogp.jpg",pagepath);
 <meta property="og:url" content={pagepath}>
 <meta property="og:image" content={ogppath}>
 <meta property="og:type" content="website">
+<ViewTransitions />
+<style>
+  h2{
+    color:red;
+  }
+</style>
 </head>
 
-  <body>
+  <body transition:animate="slide">
     <header>
       <h2>{title}</h2>
       <nav>
@@ -30,5 +39,12 @@ const ogppath = new URL("/ogp.jpg",pagepath);
     <footer>
       <p>&copy; 2024 Trident School of Information Technology</p>
     </footer>
+    <script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script is:inline>
+      $("footer p").on("click", () => {
+        alert($("footer p").text());
+      });
+    </script>
   </body>
+
 </html>
