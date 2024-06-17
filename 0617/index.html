@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0614クイズ</title>
+  </head>
+
+  <body>
+    <h1>キングダム 大将軍の帰還</h1>
+    <h2>キャスト</h2>
+    <button class="display">俳優</button>
+    <ul class="casts">
+      <li class="cast">信：<span></span></li>
+      <li class="cast">嬴政／漂：<span></span></li>
+      <li class="cast">王騎：<span></span></li>
+      <li class="cast">河了貂：<span></span></li>
+    </ul>
+
+    <h2>原作</h2>
+    <button class="result">漫画「キングダム」</button>
+    <div class="data"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const casts = ["山﨑賢人", "吉沢亮", "大沢たかお", "橋本環奈"];
+      const kingdom = {
+        author: "原泰久",
+        publisher: "集英社",
+        magazine: "週刊ヤングジャンプ",
+        firstIssue: "2006年9号",
+        volumes: "既刊72巻（2024年5月現在）",
+      };
+      const displayBtn = document.querySelector(".display");
+      const resultBtn = document.querySelector(".result");
+
+      //ここから下の記述したJavaScriptを送ってください。
+      //問題1
+      displayBtn.addEventListener("click", function () {
+        const castSpan = document.querySelectorAll(".cast span");
+        for (let i = 0; i < castSpan.length; i++) {
+          castSpan[i].textContent = casts[i];
+        }
+      });
+
+      //問題2
+      resultBtn.addEventListener("click", function () {
+        const ulElm = document.createElement("ul");
+        document.querySelector(".data").innerHTML = "";
+        for (const key in kingdom) {
+          ulElm.innerHTML += `<li>${kingdom[key]}</li>`;
+        }
+        document.querySelector(".data").appendChild(ulElm);
+      });
+    </script>
+  </body>
+</html>
