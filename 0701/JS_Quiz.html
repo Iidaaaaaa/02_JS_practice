@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ゴレンジャー</title>
+    <style>
+      .gorenger li {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>thisと関数の復習</h1>
+    <ul class="gorenger">
+      <li class="red">アカレンジャー</li>
+      <li class="blue">アオレンジャー</li>
+      <li class="green">ミドレンジャー</li>
+      <li class="gold">キレンジャー</li>
+      <li class="deeppink">モモレンジャー</li>
+    </ul>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //関数colorChangeのみ送ってください。
+      const gorenger = document.querySelectorAll(".gorenger li");
+      for (let i = 0; i < gorenger.length; i++) {
+        gorenger[i].addEventListener("click", function () {
+          colorChange(this);
+        });
+      }
+
+      function colorChange(Color) {
+        //ここから
+        for (let j = 0; j < gorenger.length; j++) {
+          gorenger[j].style.color = "black";
+        }
+        Color.style.color = Color.className;
+        //ここまで
+      }
+      //jQuery 関数colorChangeのみ送ってください。
+      /*
+        $(function () {
+            $('.gorenger li').on('click', function () {
+                //ここから
+                $('.gorenger li').not(this).css('color', 'black');
+                $(this).css('color', $(this).attr('class'));
+                //ここまで
+            })
+        })*/
+    </script>
+  </body>
+</html>
